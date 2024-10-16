@@ -24,7 +24,7 @@ class RecipeResource extends JsonResource
             'about' => $this->about,
             'category' => new CategoryResource($this->whenLoaded('category')),
             'recipe_ingredients' => RecipeIngredientResource::collection($this->whenLoaded('recipeIngredients')),
-            'photo' => RecipePhotoResource::collection($this->whenLoaded('photos')),
+            'photos' => RecipePhotoResource::collection($this->whenLoaded('photos')),
             'tutorials' => RecipeTutorialResource::collection($this->whenLoaded('tutorials')),
             'author' => new RecipeAuthorResource($this->whenLoaded('author')),
         ];
